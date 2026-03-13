@@ -4,7 +4,6 @@ let mensagem = document.getElementById("mensagem")
 let listaTarefas = document.getElementById("listaTarefas")
 
 btnAdicionar.addEventListener("click", () => {
-
     if (!inputTarefa.value) {
         mensagem.innerText = 'Tarefa vazia!'
         mensagem.className = 'text-danger fw-bold'
@@ -14,6 +13,16 @@ btnAdicionar.addEventListener("click", () => {
         listaTarefas.appendChild(item)
         mensagem.className = 'text-success fw-bold'
         mensagem.innerText = `Criado com sucesso`
-    }
 
+        let btnRemover = document.createElement("button")
+        btnRemover.innerText = "Remover"
+        btnRemover.className = "btn btn-danger "
+        btnRemover.addEventListener("click", () => {
+            item.remove()
+        })
+        item.appendChild(btnRemover)
+
+    }
 })
+
+
