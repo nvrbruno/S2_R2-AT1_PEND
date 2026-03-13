@@ -10,12 +10,26 @@
 <body class="bg-light">
 
     <main class="container mt-5">
+
         <h1 id="Cadastro" class="text-center mb-4">
-            Modificador de texto
+            Cadastro
         </h1>
-        <button class="btn btn-primary w-100 py-2" type="submit" value="enviar" id="btnEnviar">
-            Clique aqui
+
+        <form id="cadastro">
+            <h1 class="h3 mb-3 fw-normal">Cadastro</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="nomeCliente">
+                <label for="nomeCliente">Escreva aqui o seu nome</label>
+            </div>
+
+        </form>
+        <button class="btn btn-primary w-100 py-2" type="submit" value="enviar" id="btnCadastrar">
+            Clique aqui para se cadastrar
         </button>
+
+        <p id="mensagem" class="fw-bold"></p>
+
     </main>
 
     <script src="script.js"></script>
