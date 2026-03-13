@@ -1,7 +1,11 @@
-let nomeCliente = document.getElementById("nomeCliente")
-let btnCadastrar = document.querySelector("#btnCadastrar")
+let nomeTarefa = document.getElementById("nomeTarefa")
+let btnCriar = document.querySelector("#btnCriar")
 let mensagem = document.getElementById("mensagem")
+let lista = document.getElementById("lista")
 
-btnCadastrar.addEventListener("click", () => {
-mensagem.innerText = `Seja bem vindo ${nomeCliente.value}`
+btnCriar.addEventListener("click", () => {
+  let item = document.createElement("li")
+  item.innerText = nomeTarefa.value
+  lista.appendChild(item)
+  mensagem.innerText = `Criado com sucesso`
 })

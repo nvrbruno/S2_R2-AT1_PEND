@@ -16,19 +16,21 @@
         </h1>
 
         <form id="cadastro">
-            <h1 class="h3 mb-3 fw-normal">Cadastro</h1>
+            <h1 class="h3 mb-3 fw-normal">Lista de tarefas</h1>
 
             <div class="form-floating">
-                <input type="text" class="form-control" id="nomeCliente">
-                <label for="nomeCliente">Escreva aqui o seu nome</label>
+                <input type="text" class="form-control" id="nomeTarefa">
+                <label for="nomeTarefa">Escreva aqui o nome da sua tarefa</label>
             </div>
 
         </form>
-        <button class="btn btn-primary w-100 py-2" type="submit" value="enviar" id="btnCadastrar">
-            Clique aqui para se cadastrar
+        <button class="btn btn-primary w-100 py-2" type="submit" value="enviar" id="btnCriar">
+            Criar
         </button>
 
-        <p id="mensagem" class="fw-bold"></p>
+        <ul id="lista"></ul>
+
+        <p id="mensagem" class="text-success fw-bold"></p>
 
     </main>
 
