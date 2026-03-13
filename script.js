@@ -1,6 +1,7 @@
-let btnEnviar = document.querySelector("#btnEnviar")
+let nomeCliente = document.getElementById("nomeCliente")
+let btnCadastrar = document.querySelector("#btnCadastrar")
 let mensagem = document.getElementById("mensagem")
 
-btnEnviar.addEventListener("click", () => {
-btnEnviar.innerText = `Mensagem alterada pelo JS`
+btnCadastrar.addEventListener("click", () => {
+mensagem.innerText = `Seja bem vindo ${nomeCliente.value}`
 })
