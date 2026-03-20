@@ -9,20 +9,23 @@ btnAdicionar.addEventListener("click", () => {
         mensagem.className = 'text-danger fw-bold'
     } else {
         let item = document.createElement("li")
-        item.innerText = inputTarefa.value
-        listaTarefas.appendChild(item)
-        mensagem.className = 'text-success fw-bold'
-        mensagem.innerText = `Criado com sucesso`
+        item.className = "d-flex align-items-center gap-2"
+
+        let texto = document.createElement("span")
+        texto.innerText = inputTarefa.value
 
         let btnRemover = document.createElement("button")
         btnRemover.innerText = "Remover"
-        btnRemover.className = "btn btn-danger "
+        btnRemover.className = "btn btn-danger btn-sm"
         btnRemover.addEventListener("click", () => {
             item.remove()
         })
-        item.appendChild(btnRemover)
 
+        item.appendChild(texto)
+        item.appendChild(btnRemover)
+        listaTarefas.appendChild(item)
+
+        mensagem.className = 'text-success fw-bold'
+        mensagem.innerText = 'Criado com sucesso'
     }
 })
-
-
