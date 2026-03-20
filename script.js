@@ -10,6 +10,7 @@ btnAdicionar.addEventListener("click", () => {
         mensagem.className = 'text-danger fw-bold'
     } else {
         let item = document.createElement("li")
+        item.className = "list-group-item"
         item.innerText = inputTarefa.value
         listaTarefas.appendChild(item)
         mensagem.className = 'text-success fw-bold'
