@@ -11,7 +11,7 @@ btnAdicionar.addEventListener("click", () => {
         let item = document.createElement("li")
         item.className = "d-flex align-items-center gap-2"
 
-        let texto = document.createElement("span")
+        let texto = document.createElement("a")
         texto.innerText = inputTarefa.value
 
         let btnRemover = document.createElement("button")
