@@ -1,12 +1,20 @@
-let nomeTarefa = document.getElementById("nomeTarefa")
-let btnCriar = document.querySelector("#btnCriar")
+let inputTarefa = document.getElementById("inputTarefa")
+let btnAdicionar = document.querySelector("#btnAdicionar")
 let mensagem = document.getElementById("mensagem")
-let lista = document.getElementById("lista")
+let listaTarefas = document.getElementById("listaTarefas")
 
-btnCriar.addEventListener("click", () => {
-    let item = document.createElement("li")
-    item.className = "list-group-item"
-    item.innerText = inputTarefa.value
-    lista.appendChild(item)
-    mensagem.innerText = `Criado com sucesso`
+btnAdicionar.addEventListener("click", () => {
+
+    if (!inputTarefa.value) {
+        mensagem.innerText = 'Tarefa vazia!'
+        mensagem.className = 'text-danger fw-bold'
+    } else {
+        let item = document.createElement("li")
+        item.className = "list-group-item"
+        item.innerText = inputTarefa.value
+        listaTarefas.appendChild(item)
+        mensagem.className = 'text-success fw-bold'
+        mensagem.innerText = `Criado com sucesso`
+    }
+
 })
